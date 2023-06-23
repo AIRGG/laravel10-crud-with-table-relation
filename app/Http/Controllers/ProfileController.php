@@ -7,6 +7,7 @@ use App\Models\MRole;
 use App\Models\MUser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
@@ -48,7 +49,7 @@ class ProfileController extends Controller
         // -- set ke table
         $tblUser = new MUser();
         $tblUser->username = $form_username;
-        $tblUser->password = $form_password;
+        $tblUser->password = Hash::make($form_password);
         $tblUser->id_role = $form_role;
         $tblUser->save(); // doing save here..
 
@@ -83,7 +84,9 @@ class ProfileController extends Controller
 
         $tblUser = MUser::find($tblProfile->id_user);
         $tblUser->username = $form_username;
-        $tblUser->password = $form_password;
+        if($form_password != '') {
+            $tblUser->password = Hash::make($form_password);
+        }
         $tblUser->id_role = $form_role;
         $tblUser->save(); // doing save here..
 

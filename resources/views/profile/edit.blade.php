@@ -15,7 +15,7 @@
     <label>Username</label><br>
     <input name="username" class="form-control" type="text" value="{{ $data->user->username }}" required><br>
     <label>Password</label><br>
-    <input name="password" class="form-control" type="password" value="{{ $data->user->password }}" required><br>
+    <input name="password" class="form-control" type="password" value="" placeholder="input jika ingin mengganti password" required><br>
     <label>Role</label><br>
     <select name="role" id="role" class="form-control">
         @foreach ($dataRole as $nomor => $value)

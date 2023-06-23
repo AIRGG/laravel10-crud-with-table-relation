@@ -24,6 +24,7 @@
         <a href="{{ route('role.index') }}" class="btn btn-primary btn-sm">Role</a>
         <a href="{{ route('profile.index') }}" class="btn btn-primary btn-sm">Profile</a>
         <a href="{{ route('post.index') }}" class="btn btn-primary btn-sm">Post</a>
+        <a href="{{ route('landing.login.index.proses-logout') }}" class="btn btn-danger btn-sm">Logout</a>
         {{-- <a href="{{ route('posts.index') }}" class="btn btn-primary btn-sm">Posts</a>
         <a href="{{ route('posts-tipe.index') }}" class="btn btn-primary btn-sm">Tipe Posts</a> --}}
         <div class="row mt-3">
